@@ -29,4 +29,7 @@ Route::post('/users/update/{id}', [App\Http\Controllers\UserController::class, '
 Route::get('/users/delete/{id}', [App\Http\Controllers\UserController::class, 'delete']);
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index']);
 
+//Tasks route
+Route::resource('tasks', App\Http\Controllers\TaskController::class);
+
 require __DIR__.'/auth.php';
